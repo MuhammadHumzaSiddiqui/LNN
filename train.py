@@ -1,0 +1,21 @@
+
+class Trainer:
+    def __init__(self):
+        self.loss_fn = self._loss_fn
+
+    def _loss_fn(self, y_pred, y_true):
+        return ((y_pred - y_true) ** 2).mean()
+        #MSE formula
+    def mae_metric(y_pred, y_true):
+        return ((y_pred - y_true).abs()).mean()
+        #MAE formula
+
+
+
+    def train(self, model, X_train, y_train, epochs=100):
+        for epoch in range(epochs):
+            y_pred = model(X_train)
+            loss = self.loss_fn(y_pred, y_train)
+            print(f"Epoch {epoch+1}/{epochs}, Loss: {loss:.4f}")
+            #Generic training loop structure
+            # Here you would typically include backpropagation and optimization steps
