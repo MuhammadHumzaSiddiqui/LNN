@@ -1,2 +1,2 @@
 # LNN
-learning neural networks 
+learning neural networks by making a house price predictor
