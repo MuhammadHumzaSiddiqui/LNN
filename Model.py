@@ -6,5 +6,5 @@ class Model:
         self.output_size = output_size
         self.activation_function = activation_function
         # Initialize weights and biases here
-    def forward
-    train()
+    # def forward():
+    # train()
