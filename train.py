@@ -15,7 +15,10 @@ class Trainer:
     def rmse_metric(y_pred, y_true):
         return ((y_true-y_pred) ** 2).mean().sqrt()
         #RMSE formula
+    def grad_descent(self, y_pred, y_true, learning_rate):
+            return (y_pred - y_true * learning_rate);
 
+    def evaluate()
 
     def train(self, model, X_train, y_train, epochs=100):
         for epoch in range(epochs):
