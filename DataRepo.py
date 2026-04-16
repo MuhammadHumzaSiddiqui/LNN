@@ -25,8 +25,27 @@ class DataRepo:
         return good_rows
             
                 
-    # def build_features_and_target
-    # def split(X, y, val_ratio, seed)
+    def build_features_and_target(self, good_rows):
+        x = []
+        y = []
+        feature_order = ["sqft_living", "bedrooms", "bathrooms"]
+        for row in good_rows:
+            features = [row[name] for name in feature_order]
+            target = row["price"]
+            x.append(features)
+            y.append(target)
+
+        return x, y
+            
+
+    def split(X, y, val_ratio, seed):
+        train = []
+        val = []
+        n = 1-val_ratio
+        for row in val_ratio*val_size:
+            val.append(row)
+            
+        
     # def fit_scaler(X_train)
     # def transform(X)
     # def prepare(source)
